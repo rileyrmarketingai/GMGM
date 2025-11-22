@@ -187,7 +187,7 @@ class GoogleMaps:
 
     def scrape(self, query, row_number_start=1):
         """
-        Returns a list of dicts, each matching the Roofing Leads schema.
+        Returns a list of dicts, each matching the Roofing Leads New schema.
         """
         leads = []
         try:
@@ -223,3 +223,4 @@ class GoogleMaps:
             if self._verbose:
                 print(f"Error during scraping: {e}")
         return leads
+
