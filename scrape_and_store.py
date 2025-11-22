@@ -17,7 +17,7 @@ def mark_search_used(search):
 def insert_leads(leads):
     for lead in leads:
         try:
-            supabase.table("Roofing Leads").insert(lead).execute()
+            supabase.table("Roofing Leads New").insert(lead).execute()
         except Exception as e:
             if "duplicate key value violates unique constraint" in str(e):
                 print(f"Duplicate lead skipped: {lead.get('title', '')}")
